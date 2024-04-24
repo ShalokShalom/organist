@@ -7,7 +7,6 @@ let import_nix = organist.nix.import_nix in
     organist.shells.Bash
     & {
       build.packages = {
-        nickel-lang-cli = import_nix "nixpkgs#nickel",
         parallel = import_nix "nixpkgs#parallel",
         gnused = import_nix "nixpkgs#gnused",
       },
@@ -32,6 +31,7 @@ let import_nix = organist.nix.import_nix in
   flake.packages = {
     # Re-exported to make it easy for downstream to depend on them
     nickel = import_nix "nixpkgs#nickel",
+    nls = import_nix "nixpkgs#nls",
   },
 
   flake.checks

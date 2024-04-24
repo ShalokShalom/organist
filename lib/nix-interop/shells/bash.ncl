@@ -9,4 +9,5 @@ let nix_builtins = import "../builtins.ncl" in
       },
     },
   dev.packages.nickel = nix_builtins.import_nix "organist#nickel",
+  dev.packages.nls = nix_builtins.import_nix "organist#nls",
 }
